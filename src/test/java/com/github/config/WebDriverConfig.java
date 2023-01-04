@@ -3,7 +3,7 @@ package com.github.config;
 import org.aeonbits.owner.Config;
 
 @Config.Sources({
-        "classpath:${environment}.properties"
+        "classpath:${env}.properties"
 })
 
 public interface WebDriverConfig extends Config {
@@ -20,6 +20,10 @@ public interface WebDriverConfig extends Config {
     @DefaultValue("100.0")
     String getBrowserVersion();
 
-    @Key("remoteWebDriver")
-    String getRemoteWebDriver();
+    @Key("remoteUrl")
+    String getRemoteUrl();
+
+    @Key("browserSize")
+    @DefaultValue("1920x1080")
+    String getBrowserSize();
 }

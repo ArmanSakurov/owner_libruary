@@ -9,16 +9,14 @@ public class WebDriverProvider {
 
     public static void configure() {
 
-        Configuration.baseUrl = WebDriverProvider.config.getBaseUrl();
-        Configuration.browser = WebDriverProvider.config.getBrowser();
-        Configuration.browserVersion = WebDriverProvider.config.getBrowserVersion();
-        Configuration.browserSize = "1920x1080";
+        Configuration.baseUrl = config.getBaseUrl();
+        Configuration.browser = config.getBrowser();
+        Configuration.browserVersion = config.getBrowserVersion();
+        Configuration.browserSize = config.getBrowserSize();
 
-        String remoteUrl = WebDriverProvider.config.getRemoteWebDriver();
+        String remoteUrl = config.getRemoteUrl();
         if (remoteUrl != null) {
             Configuration.remote = remoteUrl;
         }
-
-
     }
 }

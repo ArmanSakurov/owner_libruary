@@ -9,9 +9,9 @@ public class SelenideRepositorySearchTests extends TestBase {
 
     @Test
     void shouldFindSelenideRepository() {
-        open("https://github.com/");
-//        $("[data-test-selector=nav-search-input]").setValue("selenide").pressEnter();
-//        $$(".repo-list li").first().$("a").click();
-//        $("#repository-container-header").shouldHave(text("selenide / selenide"));
+        open("");
+        $("[data-test-selector=nav-search-input]").setValue("selenide").pressEnter();
+        $$(".repo-list li").first().$("a").click();
+        $("#repository-container-header").shouldHave(text("selenide / selenide"));
     }
 }
